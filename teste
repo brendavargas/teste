@@ -1,0 +1,21 @@
+<?php
+function conta_dias($datainicial) {
+		$a = explode("/", $datainicial);
+		$diaa = $a[0];
+		$mesa = $a[1];
+		$anoa = $a[2];
+
+		$datafinal = '05/07/2016';
+
+		$b = explode("/", $datafinal);
+		$diab = $b[0];
+		$mesb = $b[1];
+		$anob = $b[2];
+
+		$diferenca = (($b[0] + $a[0]) + (($b[1] + $a[1]) * 30) + (($b[2] + $a[2]) * 365));
+
+		echo "A diferença entre as datas é ".$diferenca." dias <br> <br> <br>";
+	}
+
+	echo conta_dias('13/04/1988');
+?>
